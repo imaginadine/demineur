@@ -1,0 +1,317 @@
+\hypertarget{demineur_8h}{}\doxysection{src/demineur.h File Reference}
+\label{demineur_8h}\index{src/demineur.h@{src/demineur.h}}
+
+
+fichier d\textquotesingle{}en-\/tête de \mbox{\hyperlink{demineur_8c}{demineur.\+c}}  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for demineur.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcaseD}{caseD}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{demineur_8h_a0b58e6e2bddf421f7e879765960937a4}{E\+R\+R\+E\+U\+R\+\_\+\+S\+A\+I\+S\+IE}}~-\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{demineur_8h_a6dfbc810c137b52a35d982dc68daddb9}\label{demineur_8h_a6dfbc810c137b52a35d982dc68daddb9}} 
+typedef struct \mbox{\hyperlink{structcaseD}{caseD}} {\bfseries caseD}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{demineur_8h_abbd20a84a155bf39415650ee7f1c0560}{saisie\+Entier}} (const char $\ast$texte)
+\begin{DoxyCompactList}\small\item\em vérifie que les valeurs entrées sont des chiffres entiers \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$ \mbox{\hyperlink{demineur_8h_a45e4d403cbd98b6ce6915d0e25aeefd4}{cree\+Tab}} (int int\+\_\+n, int int\+\_\+m)
+\begin{DoxyCompactList}\small\item\em crée un tableau dynamique 2D de cases en allouant la mémoire \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{demineur_8h_ab6ee802dec7263635924fb140fe827e7}{suppr\+Tab}} (\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$ppcase\+D\+\_\+tab, int int\+\_\+n)
+\begin{DoxyCompactList}\small\item\em supprime un tableau dynamique 2D en libérant l\textquotesingle{}espace mémoire \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{demineur_8h_afff32e29b4d3af45e60d108fbdea96ce}{affiche\+D\+Tab}} (\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$ppcase\+D\+\_\+tab, int int\+\_\+n, int int\+\_\+m)
+\begin{DoxyCompactList}\small\item\em affiche le plateau de jeu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{demineur_8h_afb4c951665f2b0dbe3af985f729228d8}{initialisation}} (\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$ppcase\+D\+\_\+tab, int int\+\_\+n, int int\+\_\+m, int int\+\_\+nb\+Mines)
+\begin{DoxyCompactList}\small\item\em initialise le plateau en mettant les mines ....... \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{demineur_8h_a49fe09693666d1f185129ce001f0b6c4}{compte\+Mines}} (\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$ppcase\+D\+\_\+tab, int int\+\_\+x, int int\+\_\+y, int int\+\_\+n, int int\+\_\+m)
+\begin{DoxyCompactList}\small\item\em compte le nombre de mines adjacentes à chaque case \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{demineur_8h_abccd197d7e9f6221c6cdca89d6c0ea85}{symbole}} (\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$ppcase\+D\+\_\+tab, int int\+\_\+x, int int\+\_\+y, int int\+\_\+n, int int\+\_\+m)
+\begin{DoxyCompactList}\small\item\em renvoie le symbole qui doit être affiché \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{demineur_8h_a6c3ee7ad1329dee15c7224340b9e65ec}{decouvrir}} (\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$ppcase\+D\+\_\+tab, int int\+\_\+x, int int\+\_\+y, int int\+\_\+n, int int\+\_\+m)
+\begin{DoxyCompactList}\small\item\em découvre la case \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{demineur_8h_a6a72ae92528e35c1e13322d4a7e6fd93}{compte\+Mines\+Total}} (\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$ppcase\+D\+\_\+tab, int int\+\_\+n, int int\+\_\+m, int int\+\_\+nb\+Mines)
+\begin{DoxyCompactList}\small\item\em compte le nombre de mines total qui n\textquotesingle{}ont pas été découvertes, sous l\textquotesingle{}hypothèse que les drapeaux soient justes \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{demineur_8h_abf7289ba11bfb8b3432ffe42fc85e218}{victoire}} (\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$ppcase\+D\+\_\+tab, int int\+\_\+n, int int\+\_\+m)
+\begin{DoxyCompactList}\small\item\em vérifie si toutes les cases sont découvertes \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{demineur_8h_ab4af8f81f0a588f2004a536c4377b23c}{tour\+De\+Jeu}} (\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$ppcase\+D\+\_\+tab, int int\+\_\+n, int int\+\_\+m, int int\+\_\+nb\+Mines)
+\begin{DoxyCompactList}\small\item\em tour du joueur \+: demande de la ligne et colonne de la case, puis découverte ou non de celle-\/ci \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+fichier d\textquotesingle{}en-\/tête de \mbox{\hyperlink{demineur_8c}{demineur.\+c}} 
+
+\begin{DoxyAuthor}{Author}
+Amandine Legrand \href{mailto:legrandama@cy-tech.fr}{\texttt{ legrandama@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+09/12/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{demineur_8h_a0b58e6e2bddf421f7e879765960937a4}\label{demineur_8h_a0b58e6e2bddf421f7e879765960937a4}} 
+\index{demineur.h@{demineur.h}!ERREUR\_SAISIE@{ERREUR\_SAISIE}}
+\index{ERREUR\_SAISIE@{ERREUR\_SAISIE}!demineur.h@{demineur.h}}
+\doxysubsubsection{\texorpdfstring{ERREUR\_SAISIE}{ERREUR\_SAISIE}}
+{\footnotesize\ttfamily \#define E\+R\+R\+E\+U\+R\+\_\+\+S\+A\+I\+S\+IE~-\/1}
+
+Code d\textquotesingle{}erreur associé à la saisie 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{demineur_8h_afff32e29b4d3af45e60d108fbdea96ce}\label{demineur_8h_afff32e29b4d3af45e60d108fbdea96ce}} 
+\index{demineur.h@{demineur.h}!afficheDTab@{afficheDTab}}
+\index{afficheDTab@{afficheDTab}!demineur.h@{demineur.h}}
+\doxysubsubsection{\texorpdfstring{afficheDTab()}{afficheDTab()}}
+{\footnotesize\ttfamily void affiche\+D\+Tab (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$}]{ppcase\+D\+\_\+tab,  }\item[{int}]{int\+\_\+n,  }\item[{int}]{int\+\_\+m }\end{DoxyParamCaption})}
+
+
+
+affiche le plateau de jeu 
+
+\begin{DoxyAuthor}{Author}
+Amandine Legrand \href{mailto:legrandama@cy-tech.fr}{\texttt{ legrandama@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+09/12/2021
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+
+\end{DoxyRemark}
+\mbox{\Hypertarget{demineur_8h_a49fe09693666d1f185129ce001f0b6c4}\label{demineur_8h_a49fe09693666d1f185129ce001f0b6c4}} 
+\index{demineur.h@{demineur.h}!compteMines@{compteMines}}
+\index{compteMines@{compteMines}!demineur.h@{demineur.h}}
+\doxysubsubsection{\texorpdfstring{compteMines()}{compteMines()}}
+{\footnotesize\ttfamily int compte\+Mines (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$}]{ppcase\+D\+\_\+tab,  }\item[{int}]{int\+\_\+x,  }\item[{int}]{int\+\_\+y,  }\item[{int}]{int\+\_\+n,  }\item[{int}]{int\+\_\+m }\end{DoxyParamCaption})}
+
+
+
+compte le nombre de mines adjacentes à chaque case 
+
+\begin{DoxyAuthor}{Author}
+Amandine Legrand \href{mailto:legrandama@cy-tech.fr}{\texttt{ legrandama@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12/12/2021
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+
+\end{DoxyRemark}
+\mbox{\Hypertarget{demineur_8h_a6a72ae92528e35c1e13322d4a7e6fd93}\label{demineur_8h_a6a72ae92528e35c1e13322d4a7e6fd93}} 
+\index{demineur.h@{demineur.h}!compteMinesTotal@{compteMinesTotal}}
+\index{compteMinesTotal@{compteMinesTotal}!demineur.h@{demineur.h}}
+\doxysubsubsection{\texorpdfstring{compteMinesTotal()}{compteMinesTotal()}}
+{\footnotesize\ttfamily int compte\+Mines\+Total (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$}]{ppcase\+D\+\_\+tab,  }\item[{int}]{int\+\_\+n,  }\item[{int}]{int\+\_\+m,  }\item[{int}]{int\+\_\+nb\+Mines }\end{DoxyParamCaption})}
+
+
+
+compte le nombre de mines total qui n\textquotesingle{}ont pas été découvertes, sous l\textquotesingle{}hypothèse que les drapeaux soient justes 
+
+\begin{DoxyAuthor}{Author}
+Amandine Legrand \href{mailto:legrandama@cy-tech.fr}{\texttt{ legrandama@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12/12/2021
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+
+\end{DoxyRemark}
+\mbox{\Hypertarget{demineur_8h_a45e4d403cbd98b6ce6915d0e25aeefd4}\label{demineur_8h_a45e4d403cbd98b6ce6915d0e25aeefd4}} 
+\index{demineur.h@{demineur.h}!creeTab@{creeTab}}
+\index{creeTab@{creeTab}!demineur.h@{demineur.h}}
+\doxysubsubsection{\texorpdfstring{creeTab()}{creeTab()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcaseD}{caseD}}$\ast$$\ast$ cree\+Tab (\begin{DoxyParamCaption}\item[{int}]{int\+\_\+n,  }\item[{int}]{int\+\_\+m }\end{DoxyParamCaption})}
+
+
+
+crée un tableau dynamique 2D de cases en allouant la mémoire 
+
+\begin{DoxyAuthor}{Author}
+Amandine Legrand \href{mailto:legrandama@cy-tech.fr}{\texttt{ legrandama@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+09/12/2021 
+\end{DoxyDate}
+\mbox{\Hypertarget{demineur_8h_a6c3ee7ad1329dee15c7224340b9e65ec}\label{demineur_8h_a6c3ee7ad1329dee15c7224340b9e65ec}} 
+\index{demineur.h@{demineur.h}!decouvrir@{decouvrir}}
+\index{decouvrir@{decouvrir}!demineur.h@{demineur.h}}
+\doxysubsubsection{\texorpdfstring{decouvrir()}{decouvrir()}}
+{\footnotesize\ttfamily void decouvrir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$}]{ppcase\+D\+\_\+tab,  }\item[{int}]{int\+\_\+x,  }\item[{int}]{int\+\_\+y,  }\item[{int}]{int\+\_\+n,  }\item[{int}]{int\+\_\+m }\end{DoxyParamCaption})}
+
+
+
+découvre la case 
+
+\begin{DoxyAuthor}{Author}
+Amandine Legrand \href{mailto:legrandama@cy-tech.fr}{\texttt{ legrandama@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12/12/2021
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+si la case n\textquotesingle{}a pas de mines adjacentes, les cases autour d\textquotesingle{}elle sont aussi découvertes 
+\end{DoxyRemark}
+\mbox{\Hypertarget{demineur_8h_afb4c951665f2b0dbe3af985f729228d8}\label{demineur_8h_afb4c951665f2b0dbe3af985f729228d8}} 
+\index{demineur.h@{demineur.h}!initialisation@{initialisation}}
+\index{initialisation@{initialisation}!demineur.h@{demineur.h}}
+\doxysubsubsection{\texorpdfstring{initialisation()}{initialisation()}}
+{\footnotesize\ttfamily void initialisation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$}]{ppcase\+D\+\_\+tab,  }\item[{int}]{int\+\_\+n,  }\item[{int}]{int\+\_\+m,  }\item[{int}]{int\+\_\+nb\+Mines }\end{DoxyParamCaption})}
+
+
+
+initialise le plateau en mettant les mines ....... 
+
+\begin{DoxyAuthor}{Author}
+Amandine Legrand \href{mailto:legrandama@cy-tech.fr}{\texttt{ legrandama@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+09/12/2021
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+
+\end{DoxyRemark}
+\mbox{\Hypertarget{demineur_8h_abbd20a84a155bf39415650ee7f1c0560}\label{demineur_8h_abbd20a84a155bf39415650ee7f1c0560}} 
+\index{demineur.h@{demineur.h}!saisieEntier@{saisieEntier}}
+\index{saisieEntier@{saisieEntier}!demineur.h@{demineur.h}}
+\doxysubsubsection{\texorpdfstring{saisieEntier()}{saisieEntier()}}
+{\footnotesize\ttfamily int saisie\+Entier (\begin{DoxyParamCaption}\item[{const char $\ast$}]{texte }\end{DoxyParamCaption})}
+
+
+
+vérifie que les valeurs entrées sont des chiffres entiers 
+
+\begin{DoxyAuthor}{Author}
+Legrand Amandine \href{mailto:legrandama@eisti.eu}{\texttt{ legrandama@eisti.\+eu}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06/12/2021
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+
+\end{DoxyRemark}
+\mbox{\Hypertarget{demineur_8h_ab6ee802dec7263635924fb140fe827e7}\label{demineur_8h_ab6ee802dec7263635924fb140fe827e7}} 
+\index{demineur.h@{demineur.h}!supprTab@{supprTab}}
+\index{supprTab@{supprTab}!demineur.h@{demineur.h}}
+\doxysubsubsection{\texorpdfstring{supprTab()}{supprTab()}}
+{\footnotesize\ttfamily void suppr\+Tab (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$}]{ppcase\+D\+\_\+tab,  }\item[{int}]{int\+\_\+n }\end{DoxyParamCaption})}
+
+
+
+supprime un tableau dynamique 2D en libérant l\textquotesingle{}espace mémoire 
+
+\begin{DoxyAuthor}{Author}
+Amandine Legrand \href{mailto:legrandama@cy-tech.fr}{\texttt{ legrandama@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+09/12/2021 
+\end{DoxyDate}
+\mbox{\Hypertarget{demineur_8h_abccd197d7e9f6221c6cdca89d6c0ea85}\label{demineur_8h_abccd197d7e9f6221c6cdca89d6c0ea85}} 
+\index{demineur.h@{demineur.h}!symbole@{symbole}}
+\index{symbole@{symbole}!demineur.h@{demineur.h}}
+\doxysubsubsection{\texorpdfstring{symbole()}{symbole()}}
+{\footnotesize\ttfamily char symbole (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$}]{ppcase\+D\+\_\+tab,  }\item[{int}]{int\+\_\+x,  }\item[{int}]{int\+\_\+y,  }\item[{int}]{int\+\_\+n,  }\item[{int}]{int\+\_\+m }\end{DoxyParamCaption})}
+
+
+
+renvoie le symbole qui doit être affiché 
+
+\begin{DoxyAuthor}{Author}
+Amandine Legrand \href{mailto:legrandama@cy-tech.fr}{\texttt{ legrandama@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12/12/2021
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+
+\end{DoxyRemark}
+\mbox{\Hypertarget{demineur_8h_ab4af8f81f0a588f2004a536c4377b23c}\label{demineur_8h_ab4af8f81f0a588f2004a536c4377b23c}} 
+\index{demineur.h@{demineur.h}!tourDeJeu@{tourDeJeu}}
+\index{tourDeJeu@{tourDeJeu}!demineur.h@{demineur.h}}
+\doxysubsubsection{\texorpdfstring{tourDeJeu()}{tourDeJeu()}}
+{\footnotesize\ttfamily int tour\+De\+Jeu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$}]{ppcase\+D\+\_\+tab,  }\item[{int}]{int\+\_\+n,  }\item[{int}]{int\+\_\+m,  }\item[{int}]{int\+\_\+nb\+Mines }\end{DoxyParamCaption})}
+
+
+
+tour du joueur \+: demande de la ligne et colonne de la case, puis découverte ou non de celle-\/ci 
+
+\begin{DoxyAuthor}{Author}
+Amandine Legrand \href{mailto:legrandama@cy-tech.fr}{\texttt{ legrandama@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12/12/2021
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+
+\end{DoxyRemark}
+\mbox{\Hypertarget{demineur_8h_abf7289ba11bfb8b3432ffe42fc85e218}\label{demineur_8h_abf7289ba11bfb8b3432ffe42fc85e218}} 
+\index{demineur.h@{demineur.h}!victoire@{victoire}}
+\index{victoire@{victoire}!demineur.h@{demineur.h}}
+\doxysubsubsection{\texorpdfstring{victoire()}{victoire()}}
+{\footnotesize\ttfamily int victoire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcaseD}{caseD}} $\ast$$\ast$}]{ppcase\+D\+\_\+tab,  }\item[{int}]{int\+\_\+n,  }\item[{int}]{int\+\_\+m }\end{DoxyParamCaption})}
+
+
+
+vérifie si toutes les cases sont découvertes 
+
+\begin{DoxyAuthor}{Author}
+Amandine Legrand \href{mailto:legrandama@cy-tech.fr}{\texttt{ legrandama@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12/12/2021
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+1 si le joueur a découvert toutes les cases et donc gagné, 0 sinon 
+\end{DoxyReturn}

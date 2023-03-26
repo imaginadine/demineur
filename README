@@ -1,0 +1,14 @@
+DEMINEUR
+
+Comment compiler le programme ?
+Ecrire la ligne suivante dans le terminal :
+	cd demineur
+    	make
+
+Comment exécuter le programme ?
+Ecrire cette ligne à l'emplacement de demineur dans le terminal :
+    	./demineur
+
+Comment générer le doxygen :
+	cd demineur
+    	doxygen Doxyfile
